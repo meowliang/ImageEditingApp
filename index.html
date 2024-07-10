@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Image Editing App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="editing.js" defer></script>
+  </head>
+  <body>
+
+    <h1>Basic Image Editing App</h1>
+
+    <!--Notes: use CSS grid to have a toolbar on the side, canvas in the middle, 
+    image color editing options on the bottom.
+    Toolbar: Paint bucket/gradient, draw (line or pattern(canvasAPI)), add stickers (canvasAPI), text, move, zoom in/out?, transform
+    Image editing options: Opacity, grayscale, Saturation, Brightness, RGB slider, 
+    Blending: Multiply/Add/Subtract/Overlay/Soften/Screen
+    Options: Upload? Or select from pre-uploaded photos only for liability/simplicity? Save, Download, Add to Gallery?
+    Gallery: shows edits that others have made
+    Should it be simpler?-->
+    
+    <div class="toolbar">
+
+      <div class="tool" id="move"></div>
+      <div class="tool" id="transform"></div>
+      <div class="tool" id="text"></div>
+      <div class="tool" id="draw"></div>
+      <div class="tool" id="stickers"></div>
+      <div class="tool" id="paint"></div>
+
+    </div>
+
+    <div class="img-container">
+
+        <canvas id="canvas" width="100%" height="100%">Image editing app</canvas>
+
+    </div>
+	
+    <div class="editing-container">
+
+      <input type="range" min="1" max="100" value="50" class="edit" id="brightness">
+      <input type="range" min="1" max="100" value="50" class="edit" id="saturation">
+      <input type="range" min="1" max="100" value="50" class="edit" id="opacity">
+
+    </div>
+
+    <!--<div class="blending">
+        For simplicity's sake not going to focus on this right now
+    </div>-->
+
+    <div class="options">
+
+      <input type="submit" value="Save" />
+
+    </div>
+
+    <div class="gallery">
+
+        <!--Use JS to append saved images
+          Use localStorage?-->
+        
+    </div>
+
+  </body>
+</html>
