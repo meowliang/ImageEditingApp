@@ -23,20 +23,29 @@
     
     <div class="toolbar">
       <!--<h2>Toolbar</h2>-->
-      <div class="tool" id="move"></div>
-      <div class="tool" id="transform"></div>
-      <div class="tool" id="text"></div>
-      <div class="tool" id="draw"></div>
+      <div class="tool" id="move">Move</div>
+      <div class="tool" id="transform">Transform</div>
+      <div class="tool" id="text">Text</div>
+      <div class="message" id="text-msg" hidden>
+        <label name="text-input">Enter text:</label>
+        <input type="text" name="text-input" id="text-input" />
+        <input type="submit" id="text-submit" value="Submit" /> then click on canvas
+      </div>
+      <div class="tool" id="draw">Draw</div>
       <!--<div class="tool" id="stickers"></div> "bonus" feature-->
-      <div class="tool" id="paint"></div>
-      <div class="tool" id="erase"></div>
-      <div class="tool" id="clear"></div>
+      <div class="tool" id="fill">Fill</div>
+      <div class="tool" id="erase">Erase</div>
+      <div class="tool" id="clear">Clear</div>
+
+    </div>
+
+    <div class="color-palette">
 
     </div>
 
     <div class="img-container">
 
-        <canvas id="canvas" width="450" height="600">Image editing app</canvas>
+        <canvas id="canvas" width="600" height="600">Image editing app</canvas>
 
     </div>
 	
